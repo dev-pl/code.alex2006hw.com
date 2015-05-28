@@ -1,0 +1,9 @@
+PWD=`pwd`
+PID=`ps -ef | grep node | grep "$PWD" | awk '{print $2, $3}'`
+for pid in $PID; do kill $pid;done
+
+export HOME=$PWD
+mkdir -p ./work
+
+npm install codebox -g
+codebox -p 9003 -u alex:davis run ./work &
