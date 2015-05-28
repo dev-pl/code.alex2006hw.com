@@ -1,4 +1,6 @@
 .codebox
 .npm
+.env
 tmp
 work
+log
